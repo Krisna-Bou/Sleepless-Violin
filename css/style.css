@@ -110,6 +110,7 @@ a:hover {
  * Site Container
  */
 .site-container {
+  margin-top: 10%;
   height: 100vh;
 }
 
@@ -135,10 +136,15 @@ a:hover {
   width: 40%;
 }
 
+ /* 
+ *  Video
+ */
 .video-container {
   height: 100vh;
   width: 90%;
-  margin: 0 5%;
+  padding: 0 5%;
+  padding-top: 5%;
+  background-color: #dddddd;
 }
 
 .video-container p{
@@ -147,9 +153,51 @@ a:hover {
 }
 
 .video-preview {
-  margin-top: 10%;
   height: 80%;
   width: 80%;
+}
+
+/* 
+ *  About 
+ */
+.split {
+  display: flex;
+  text-align: center;
+}
+
+.split-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.split img {
+  width: 400px;
+  height: auto;
+}
+
+.split-1 p {
+  margin-top: 10%;
+  width: 90%;
+}
+
+.split-1 img {
+  margin-top: 10%;
+}
+
+.split-2 p {
+  margin-top: 15%;
+  width: 60%;
+}
+
+/* 
+ *  Schedule
+ */
+.schedule-container {
+  padding-top: 5%;
+  margin-top: 10%;
+  background-color: #dddddd;
+  height: 100vh;
 }
 
 /*
