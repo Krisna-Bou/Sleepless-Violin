@@ -149,9 +149,8 @@ a:hover {
 .video-preview {
   margin-top: 10%;
   height: 80%;
-  width: auto;
+  width: 80%;
 }
-
 
 /*
  *  Scroll down arrow
