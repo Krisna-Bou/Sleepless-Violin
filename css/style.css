@@ -80,26 +80,36 @@ a:hover {
   padding-top: 10px;
   height: 100vh;
   text-align: start;
-  background-image: url(../images/background-overview.jpg);
+  background-image: url(../images/solo\ photo.jpg);
   background-size: cover;
+  background-position-x: 30%;
+  filter: brightness(60%);
+  z-index: 99;
+
 }
 
-.banner h1 {
+
+.banner-cover {
+  z-index: 1;
+  color: white;
+  width: 100%;
+  bottom: 70vh;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-cover h1{
   font-weight: 500;
   line-height: normal;
   font-family: "Times New Roman", sans-serif;
   margin-bottom: 0;
 }
 
-.banner h2 {
+.banner-cover h2{
   margin-top: 0;
   font-weight: 500;
-}
-
-.banner-cover {
-  width: 40%;
-  margin-left: 150px;
-  margin-top: 300px;
 }
 
 .cover-heading {
@@ -110,7 +120,6 @@ a:hover {
  * Site Container
  */
 .site-container {
-  margin: 10% 0;
   height: 100vh;
 }
 
@@ -122,22 +131,22 @@ a:hover {
  *  About
  */
 .about-container {
-  width: 60%;
-  margin: 0 20%;
+  width: 95%;
+  margin: 0 2.5%;
+  height: auto;
+}
+
+.about-container-1 {
+  padding-bottom: 20000px;
 }
 
 .about-container-main {
   display: flex;
 }
 
-.about-container img {
-  height: 60%;
-  width: auto;
-}
-
 .about-container p {
   margin-top: 4%;
-  margin-left: 2%;
+  margin-left: 1%;
   width: 40%;
 }
 
@@ -149,7 +158,7 @@ a:hover {
   width: 90%;
   padding: 0 5%;
   padding-top: 5%;
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 
 .video-container p{
@@ -167,7 +176,7 @@ a:hover {
  */
 .split {
   text-align: center;
-  height: 100vh;
+  height: 150vh;
 }
 
 .split-container {
@@ -275,6 +284,11 @@ a:hover {
   transform: rotate(135deg);
 }
 
+.image-1 {
+  width: 60%;
+  height: auto;
+}
+
 #scroll-down::before {
 	animation: elasticus 1s cubic-bezier(1, 0, 0, 1) infinite;
 	position: absolute;
@@ -310,6 +324,20 @@ a:hover {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
+  .site-container {
+    margin: 10% 0;
+    height: 80vh;
+  }
 
+  .about-container {
+    width: 65%;
+    margin: 0 17.5%;
+  }
+
+  .about-container p {
+    margin-top: 4%;
+    margin-left: 5%;
+    width: 40%;
+  }
 }
