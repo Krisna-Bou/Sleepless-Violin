@@ -10,14 +10,14 @@ $(window).scroll(function(){
 function checkY(){
     var current = window.scrollY;
     if( $(window).scrollTop() > startY ){
-        $('.masthead-top').slideUp(500);
+        $('.masthead-top').slideUp(100);
         if (previous > current && $(window).scrollTop() >  window.innerHeight * 0.1) {
             $('.masthead-bottom').slideDown();
         } else {
             $('.masthead-bottom').slideUp();
         }
     }else{
-        $('.masthead-top').slideDown(); // Hide the masthead if scrolled above startY
+        $('.masthead-top').slideDown(); 
         $('.masthead-bottom').slideUp(); // Hide the masthead if scrolled above startY
     }
     previous = current;

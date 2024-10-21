@@ -151,6 +151,7 @@ a:hover {
 
 .about-container-main {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .about-container p {
@@ -194,7 +195,7 @@ a:hover {
 }
 
 .split img {
-  width: 25vw;
+  width: 25%;
   height: auto;
 }
 
@@ -202,12 +203,8 @@ a:hover {
   width: 40%;
 }
 
-.split-2 {
+.split-1 {
   margin-top: 10%;
-}
-
-.split-2 p {
-  width: 100%;
 }
 
 /* 
@@ -294,7 +291,7 @@ a:hover {
 }
 
 .image-1 {
-  width: 60%;
+  width: 50%;
   height: auto;
 }
 
@@ -333,13 +330,13 @@ a:hover {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1500px) {
   .site-container {
     margin: 10% 0;
     height: 80vh;
   }
 
-  .about-container {
+  .about-container-1 {
     width: 65%;
     margin: 0 17.5%;
   }
