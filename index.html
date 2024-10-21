@@ -6,31 +6,66 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="js/aos/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="favicon.ico" href="favicon.ico?">
+    <link rel="shortcut icon" type="favicon.ico" href="favicon.ico">
+
+    <script src="js/aos/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function(){
+          checkY();  // Ensures checkY() runs after DOM is ready
+          AOS.init();  // Initialize AOS after DOM load
+      });
+    </script>
+  
+
 </head>
 
 
 <body>
-  <!-- <div id="masthead">
+  <div id="masthead" class="masthead-top">
     <div class="masthead-split">
-      <h3 class="masthead-brand"><a href="#">Fiona Qiu</a></h3>
-      <nav>
-        <ul class="nav masthead-nav" >
+      <div>
+        <ul class="masthead-nav" >
           <li><a href="#about">About</a></li>
           <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <h2 class="masthead-brand"><a href="#">Sleepless Violin</a></h2>
+      <div>
+        <ul class="masthead-nav" >
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </div> -->
+  </div>
+
+  <div id="masthead" class="masthead-bottom">
+    <div class="masthead-split">
+      <div>
+        <ul class="masthead-nav" >
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <h2 class="masthead-brand"><a href="#">Sleepless Violin</a></h2>
+      <div>
+        <ul class="masthead-nav" >
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
 
 
   <div class="banner">
   </div>
   <div class="banner-cover">
     <h1 class="cover-heading">FIONA QIU</h1>
-    <h2>Sleepless Violin</h2>
   </div>
   <div class="scroll">
     <div id="scroll-down">
@@ -81,7 +116,6 @@
     </div>
   </div>
 
-  <script src="js/aos/aos.js"></script>
-  <script>AOS.init();</script>    
+
 </body>
 </html>
