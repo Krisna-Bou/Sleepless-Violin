@@ -5,13 +5,13 @@ html,
 body {
   scroll-behavior:smooth;
   height: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
   line-height: 1.8;
   color: #3e3e3e;
   text-align: center;
   margin: 0;
-  background-color: rgba(222, 219, 211);
+  background-color: #F8F4F0;
 }
 
 /*
@@ -39,7 +39,7 @@ body {
   background-color: white;
   z-index: 10;
   font-family: 'Times New Roman', Times, serif;
-  color: black;
+  color: #3e3e3e;
  }
 
 #masthead h2 {
@@ -74,24 +74,27 @@ ul {
 }
 
 .masthead-top a,
-a:focus,
-a:hover {
+.masthead-top a:focus,
+.masthead-top a:hover {
   color: white;
   text-decoration: none;
 }
 
 .masthead-bottom a,
-a:focus,
-a:hover {
-  color: black;
+.masthead-bottom a:focus,
+.masthead-bottom a:hover {
+  color: #3e3e3e;
   text-decoration: none;
+}
+
+#about {
+
 }
 
 /*
  * Cover
  */
 .banner {
-  padding-top: 10px;
   height: 100vh;
   text-align: start;
   background-image: url(../images/solo\ photo.jpg);
@@ -107,6 +110,7 @@ a:hover {
   color: white;
   width: 100%;
   bottom: 70vh;
+  height: 0;
   position: relative;
   justify-content: center;
   display: flex;
@@ -117,7 +121,6 @@ a:hover {
 .banner-cover h1{
   font-weight: 500;
   line-height: normal;
-
   margin-bottom: 0;
 }
 
@@ -129,11 +132,14 @@ a:hover {
  * Site Container
  */
 .site-container {
+
+  padding: 5% 0;
   height: 100vh;
 }
 
 .extra {
   height: 140vh;
+  background-image: url(../images/bg.png);
 }
 
 /* 
@@ -141,13 +147,10 @@ a:hover {
  */
 .about-container {
   width: 95%;
-  margin: 0 2.5%;
+  padding: 0 2.5%;
   height: auto;
 }
 
-.about-container-1 {
-  /* padding-bottom: 20000px; */
-}
 
 .about-container-main {
   display: flex;
@@ -168,7 +171,8 @@ a:hover {
   width: 90%;
   padding: 0 5%;
   padding-top: 5%;
-  background-color: #f7f7f7;
+  background-image: url(../images/bg.png);
+  background-color: rgba(222, 219, 211, 0.2);
 }
 
 .video-container p{
@@ -185,6 +189,7 @@ a:hover {
  *  About 
  */
 .split {
+  background-image: url(../images/bg.png);  
   text-align: center;
   height: 150vh;
 }
@@ -208,12 +213,43 @@ a:hover {
 }
 
 /* 
+ *  Quote
+ */
+
+.quote {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  width: 70%;
+  padding: 5% 15% ;
+  line-height: normal;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  align-items: center;
+}
+
+.quote h1 {
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0;
+
+}
+
+.quote p {
+  align-self: flex-end;
+  font-style: italic; 
+  margin-top: 0;
+}
+
+
+/* 
  *  Schedule
  */
 .schedule-container {
-  padding-top: 5%;
-  margin-top: 10%;
-  background-color: #e0e0e0;
+  /* background-image: url(../images/bg.png); */
+  padding-top: 10%;
+  /* background-color: #e0e0e0; */
   height: 100vh;
   color: #3e3e3e;
 }
@@ -295,6 +331,23 @@ a:hover {
   height: auto;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #F8F4F0; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(116, 116, 116); 
+  border-radius: 5px;
+  height: 1%;
+}
+
 #scroll-down::before {
 	animation: elasticus 1s cubic-bezier(1, 0, 0, 1) infinite;
 	position: absolute;
@@ -332,7 +385,7 @@ a:hover {
 
 @media (min-width: 1500px) {
   .site-container {
-    margin: 10% 0;
+    padding: 10% 0;
     height: 80vh;
   }
 
