@@ -16,13 +16,13 @@ body {
 /*
  * Header
  */
- .masthead {
+ .masthead-mobile {
+  display: block;
   position: fixed;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
   z-index: 100;
   color: #3e3e3e;
   background-color: #FFFFFF;
@@ -30,16 +30,20 @@ body {
   align-content: center;
  }
 
-#masthead h2 {
+ .masthead{
+  display: none;
+ }
+
+ .masthead-mobile, #masthead h2 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.1em;
   margin: 0;
  }
 
 .masthead-split {
-  padding-left: 10%;
-  padding-right: 10%;
-  width: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -61,9 +65,9 @@ ul {
   margin-left: 20px;
 }
 
-.masthead a {
-  color: #3e3e3e;
-  font-size: 20px;
+.masthead a, .masthead-mobile a {
+  color: black;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -94,9 +98,7 @@ ul {
   bottom: 65vh;
   height: 0;
   position: relative;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+
 }
 
 .banner-cover h1{
@@ -106,7 +108,7 @@ ul {
 }
 
 .cover-heading {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 /*
@@ -120,9 +122,10 @@ ul {
 .extra {
   display: flex;
   flex-direction: column;
-  text-align:justify;
-  height: 150vh;
+  height: 100vh;
   background-color: #fafafa;
+  align-content: center;
+  justify-content: center;
   /* background-image: url(../images/bg.png); */
 }
 
@@ -136,29 +139,21 @@ ul {
   width: 40% !important;
 }
 
-
 /* 
  *  About
  */
 .about-container {
-  width: 80% ;
-  padding: 0  10%;
+  width: 100% ;
+  padding: 0;
   height: auto;
 }
-
 
 .about-container-main {
   height: auto;
-  display:flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
 }
 
 .about-container p {
-  margin-top: 4%;
-  margin-left: 1%;
-  width: 40%;
+  width: 100%;
 }
 
  /* 
@@ -166,8 +161,7 @@ ul {
  */
 .video-container {
   height: 100vh;
-  width: 90%;
-  padding: 0 5%;
+  width: 100%;
   padding-top: 5%;
   background-color: #fafafa;
 }
@@ -178,8 +172,8 @@ ul {
 }
 
 .video-preview {
-  height: 50%;
-  width: 50%;
+  height: 80% !important;
+  width: 100% !important;
 }
 
 /* 
@@ -188,16 +182,17 @@ ul {
 
 .split-container {
   display:flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
 }
 
 .split-container img{
-  width: 40%;
+  width: 50%;
+  height: auto;
 }
 
 .split-container p{
+  font-size: 12px;
   align-self: center;
-  width: 300%;
 }
 
 
@@ -206,15 +201,14 @@ ul {
  */
 
 .quote {
-  font-size: 1.5em;
-  width: 70%;
-  padding: 0 15% ;
+  font-size: 1em;
+  width: 90%;
+  padding: 0 5% ;
   line-height: normal;
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 2%;
   align-items: center;
 }
 
@@ -235,17 +229,13 @@ ul {
  *  Schedule
  */
 .schedule-container {
-  /* background-image: url(../images/bg.png); */
-  padding-top: 10%;
-  /* background-color: #e0e0e0; */
-  height: 100vh;
-  color: #3e3e3e;
+
 }
 
 .event {
-  height: 25%;
-  width: 75%;
-  margin: 2.5% 12.5%;
+  height: 15vh;
+  width: 100%;
+  margin: 1% 0%;
   margin-top: 3%;
   border: #3e3e3e solid 3px;
   text-align: left;
@@ -370,20 +360,55 @@ ul {
 	}
 }
 
-
-@media only screen and (min-width: 800px) {
-  .masthead {
-    height: 50px;
+@media only screen and (min-width: 500px) {
+  .split-container p{
+    font-size: 16px;
   }
+
+  /* .extra {
+    height: 150vh;
+  }
+  */
+
+  .split-container img{
+    width: 40%;
+    height: auto;
+  }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .masthead {
+    display: block;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    color: #3e3e3e;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #ebebeb;
+    align-content: center;
+   }
+
+   .masthead-mobile, #masthead h2 {
+    font-size: 1.5em;
+   }
+
+   .masthead-mobile{
+    display: none;
+   }
 
   .masthead a {
     font-size: 14px;
   }
 
   .masthead-split {
-    padding-left: 30%;
-    padding-right: 30%;
-    width: 40%;
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 50%;
   }
 
   .masthead-brand a {
@@ -394,9 +419,34 @@ ul {
     height: 100vh;
   }
 
+  .banner-cover {
+    z-index: 5;
+    color: white;
+    width: 100%;
+    bottom: 65vh;
+    height: 0;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover-heading {
+    font-size: 80px;
+  }
+  
+
   .site-container {
-    padding: 10% 0;
-    height: 80vh;
+    padding: 0 5% ;
+    padding-top: 5%;
+    height: 90vh;
+    justify-content: center;
+    display: flex;
+  }
+
+  #about {
+    justify-content: center;
+    display: block;
   }
 
   .about-container {
@@ -410,9 +460,47 @@ ul {
     width: 40%;
   }
 
+  .about-container-main {
+    height: auto;
+    display:flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .quote {
+    font-size: 1.5em;
+    width: 70%;
+    padding: 0 15% ;
+  }
+
+
+  .split-container {
+    justify-content: space-evenly;
+  }
+
+  .split-container img{
+    width: 40%;
+
+  }
+  
+  .split-container p{
+    font-size: 18px;
+  }
+
   .video-preview {
-    height: 80%;
-    width: 80%;
+    height: 80% !important;
+    width: 80% !important;
+  }
+
+  .video-container {
+    width: 90%;
+    padding: 0 5%;
+    padding-top: 5%;
+  }
+
+  .extra {
+    height: 150vh;
   }
 }
 
