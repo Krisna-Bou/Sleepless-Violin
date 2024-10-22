@@ -10,7 +10,6 @@ body {
   color: #3e3e3e;
   text-align: center;
   margin: 0;
-  background-color: #FFFFFF;
   font-family: 'Times New Roman', Times, serif
 }
 
@@ -23,11 +22,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 100px;
   z-index: 10;
   color: #3e3e3e;
   background-color: #FFFFFF;
   border-bottom: 1px solid #ebebeb;
+  align-content: center;
  }
 
 #masthead h2 {
@@ -63,7 +63,7 @@ ul {
 
 .masthead a {
   color: #3e3e3e;
-  font-size: 12px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -72,11 +72,7 @@ ul {
 }
 
 .masthead-brand a {
-  font-size: 1em;
-}
-
-#about {
-
+  font-size: 1.5em;
 }
 
 /*
@@ -94,7 +90,7 @@ ul {
 }
 
 .banner-cover {
-  z-index: 1;
+  z-index: 10;
   color: white;
   width: 100%;
   bottom: 65vh;
@@ -126,7 +122,8 @@ ul {
 
 .extra {
   height: 140vh;
-  background-image: url(../images/bg.png);
+  background-color: #fafafa;
+  /* background-image: url(../images/bg.png); */
 }
 
 /* 
@@ -158,8 +155,7 @@ ul {
   width: 90%;
   padding: 0 5%;
   padding-top: 5%;
-  background-image: url(../images/bg.png);
-  background-color: rgba(222, 219, 211, 0.2);
+  background-color: #fafafa;
 }
 
 .video-container p{
@@ -176,7 +172,7 @@ ul {
  *  About 
  */
 .split {
-  background-image: url(../images/bg.png);  
+  /* background-image: url(../images/bg.png);   */
   text-align: center;
   height: 150vh;
 }
@@ -196,7 +192,7 @@ ul {
 }
 
 .split-1 {
-  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 /* 
@@ -371,10 +367,22 @@ ul {
 
 @media (min-width: 1500px) {
 
+  .masthead {
+    height: 50px;
+  }
+
+  .masthead a {
+    font-size: 14px;
+  }
+
   .masthead-split {
     padding-left: 30%;
     padding-right: 30%;
     width: 40%;
+  }
+
+  .masthead-brand a {
+    font-size: 1em;
   }
 
   .site-container {
