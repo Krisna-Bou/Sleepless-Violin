@@ -10,41 +10,24 @@ body {
   color: #3e3e3e;
   text-align: center;
   margin: 0;
-  background-color: #F8F4F0;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  font-family: 'Times New Roman', Times, serif
 }
-
-.rozha-one-regular {
-
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 /*
  * Header
  */
- .masthead-top {
+ .masthead {
   position: fixed;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
-  z-index: 10;
- }
-
- .masthead-bottom {
-  display:none;
-  position: fixed;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: white;
   z-index: 10;
   color: #3e3e3e;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ebebeb;
  }
 
 #masthead h2 {
@@ -54,9 +37,9 @@ body {
  }
 
 .masthead-split {
-  padding-left: 30%;
-  padding-right: 30%;
-  width: 40%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -78,18 +61,18 @@ ul {
   margin-left: 20px;
 }
 
-.masthead-top a,
-.masthead-top a:focus,
-.masthead-top a:hover {
-  color: white;
+.masthead a {
+  color: #3e3e3e;
+  font-size: 12px;
   text-decoration: none;
 }
 
-.masthead-bottom a,
-.masthead-bottom a:focus,
-.masthead-bottom a:hover {
-  color: #3e3e3e;
-  text-decoration: none;
+.masthead a:hover {
+  color: #888888;
+}
+
+.masthead-brand a {
+  font-size: 1em;
 }
 
 #about {
@@ -387,6 +370,13 @@ ul {
 
 
 @media (min-width: 1500px) {
+
+  .masthead-split {
+    padding-left: 30%;
+    padding-right: 30%;
+    width: 40%;
+  }
+
   .site-container {
     padding: 10% 0;
     height: 80vh;
