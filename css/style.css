@@ -23,7 +23,7 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  z-index: 100;
   color: #3e3e3e;
   background-color: #FFFFFF;
   border-bottom: 1px solid #ebebeb;
@@ -85,12 +85,10 @@ ul {
   background-size: cover;
   background-position-x: 30%;
   filter: brightness(60%);
-  z-index: 99;
-
 }
 
 .banner-cover {
-  z-index: 10;
+  z-index: 5;
   color: white;
   width: 100%;
   bottom: 65vh;
@@ -115,16 +113,29 @@ ul {
  * Site Container
  */
 .site-container {
-
   padding: 5% 0;
   height: 100vh;
 }
 
 .extra {
-  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  text-align:justify;
+  height: 150vh;
   background-color: #fafafa;
   /* background-image: url(../images/bg.png); */
 }
+
+.extra img {
+  width: 25%;
+  height: auto;
+  padding: 5% 0;
+}
+
+.extra p {
+  width: 20%;
+}
+
 
 /* 
  *  About
@@ -137,8 +148,11 @@ ul {
 
 
 .about-container-main {
-  display: flex;
-  justify-content: space-evenly;
+  height: auto;
+  display:flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .about-container p {
@@ -171,29 +185,13 @@ ul {
 /* 
  *  About 
  */
-.split {
-  /* background-image: url(../images/bg.png);   */
-  text-align: center;
-  height: 150vh;
-}
 
 .split-container {
   display:flex;
   justify-content: space-evenly;
 }
 
-.split img {
-  width: 25%;
-  height: auto;
-}
 
-.split-1 p {
-  width: 40%;
-}
-
-.split-1 {
-  margin-bottom: 10%;
-}
 
 /* 
  *  Quote
@@ -365,7 +363,7 @@ ul {
 }
 
 
-@media (min-width: 1500px) {
+@media (min-width: 800px) {
 
   .masthead {
     height: 50px;
@@ -385,6 +383,10 @@ ul {
     font-size: 1em;
   }
 
+  .banner {
+    height: 100vh;
+  }
+
   .site-container {
     padding: 10% 0;
     height: 80vh;
@@ -401,3 +403,4 @@ ul {
     width: 40%;
   }
 }
+
