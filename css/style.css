@@ -441,8 +441,6 @@ ul {
   .site-container {
     padding: 5% ;
     height: 100vh;
-    justify-content: center;
-    display: flex;
   }
 
   #about {
