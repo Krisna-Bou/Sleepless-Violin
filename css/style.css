@@ -439,8 +439,7 @@ ul {
   
 
   .site-container {
-    padding: 0 5% ;
-    padding-top: 5%;
+    padding: 5% ;
     height: 100vh;
     justify-content: center;
     display: flex;
