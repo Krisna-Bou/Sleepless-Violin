@@ -229,7 +229,9 @@ ul {
  *  Schedule
  */
 .schedule-container {
-
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .event {
@@ -439,7 +441,7 @@ ul {
   .site-container {
     padding: 0 5% ;
     padding-top: 5%;
-    height: 90vh;
+    height: 100vh;
     justify-content: center;
     display: flex;
   }
@@ -450,21 +452,19 @@ ul {
   }
 
   .about-container {
-    width: 60%;
-    padding: 0 20%;
+    width: 80%;
+    padding: 5% 10%;
   }
 
   .about-container p {
     margin-top: 4%;
     margin-left: 5%;
-    width: 40%;
+    width: 60%;
   }
 
   .about-container-main {
-    height: auto;
     display:flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
   }
 
@@ -480,7 +480,7 @@ ul {
   }
 
   .split-container img{
-    width: 40%;
+    width: 35%;
 
   }
   
