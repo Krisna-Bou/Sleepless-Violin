@@ -194,8 +194,9 @@
       <p>Message</p>
         <textarea name="message" required></textarea>
       <button class="ticket-link" type="submit">Submit</button>
+      <div id="form-status">Message sent!</div> <!-- To display form submission status -->
     </form>
-    <div id="form-status"></div> <!-- To display form submission status -->
+
 
     <div class="contact-links ">
 
@@ -226,7 +227,7 @@
         });
   
         if (response.ok) {
-          document.getElementById('form-status').innerHTML = "Your message has been sent!";
+          document.getElementById('form-status').innerHTML = "Message sent!";
           form.reset(); // Clear the form after successful submission
         } else {
           document.getElementById('form-status').innerHTML = "Oops! Something went wrong.";
