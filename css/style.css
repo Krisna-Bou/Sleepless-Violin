@@ -103,6 +103,7 @@ ul {
  */
 .banner {
   height: 100vh;
+  min-height: 100%;
   text-align: start;
   background-image: url(../images/solo\ photo.jpg);
   background-size: cover;
