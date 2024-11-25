@@ -1,17 +1,29 @@
 /*
  * Base structure
  */
-html,
+
+ * {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+  box-sizing: border-box;
+}
+
 body {
   scroll-behavior:smooth;
-  height: 100%;
   font-size: 1.1em;
   line-height: 1.8;
   color: #3e3e3e;
   text-align: center;
-  margin: 0;
+  min-width: fit-content;
   font-family: 'Times New Roman', Times, serif
 }
+
+html {
+  width: 100%;
+}
+
+body { min-height: 100vh; }
 
 h1, h2 {
   font-weight: 500;
@@ -307,7 +319,7 @@ ul {
 }
 
 .article img {
-  width: 20vw;
+  width: 15vw;
   object-fit: fill;
 }
 
@@ -316,13 +328,18 @@ ul {
   margin-bottom: 1%;
   margin-top: 0;
 }
-
+.article-container {
+  padding: 2% 15%;
+  width: 70%;
+}
 
 .gallery-container {
-  padding: 2% 10%;
-  width: 80%;
-  /* background-color: #fafafa; */
+  padding: 2% 15%;
+  width: 70%;
+  background-color: #fafafa;
 }
+
+
 
 .gallery-row {
   display: flex;
@@ -609,7 +626,6 @@ ul {
   }
 
   .contact-container {
-
     height: 85vh;
     display: flex;
     justify-content: space-between;
@@ -619,12 +635,11 @@ ul {
   }
 
   .contact-bio {
-    background-color: #fafafa;
+
     width: 50%;
   }
 
   #contact {
-    padding-top: 3%;
 
   }
 
@@ -645,9 +660,11 @@ ul {
   }
 
   #contact-form input {
-    border: #3e3e3e solid 1.5px;
+    background-color: #f7f7f7;
+    border: none;
     margin: 2%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     margin-top: 0;
     color: #3e3e3e;
     font-family: 'Times New Roman', Times, serif;
