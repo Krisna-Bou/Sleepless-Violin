@@ -178,7 +178,8 @@
         <img class="img-position" src="images/IMG_1786.jpg">
       </div>      
       <div class="gallery-img">
-        <img class="img-position" src="images/IMG_1781.jpg">
+        <!-- <img class="img-position" src="images/IMG_1781.jpg"> -->
+        <img class="img-position" src="images/IMG_1782.jpg">
       </div>
     </div>
     <div class="video-container">
@@ -188,21 +189,23 @@
 
   <h1 id="contact">Contact</h1>
   <div class="contact-container" data-aos="fade-up" >
-    <div class="contact-bio">
-      <form id="contact-form">
+    <div class="contact-bio" data-aos="fade-up" data-aos-duration="1300">
+      <form id="contact-form" >
           <input type="text" name="name" required placeholder="NAME">
           <input type="email" name="email" required placeholder="EMAIL">
-          <textarea name="message" required placeholder="MESSAGE"></textarea>
+          <textarea name="message" required placeholder="YOUR MESSAGE"></textarea>
         <button class="ticket-link" type="submit">Submit</button>
         <div id="form-status"></div>
       </form>
+      <div class="contact-links">
+        <a href="https://www.instagram.com/sleeplessviolin/?hl=en"><img class="logo" src="images/instagram.png"></a>
+        <a href="mailto:sleeplessviolin@gmail.com"><img class="logo" src="images/mail.png"></a>
+        <a href="https://www.linkedin.com/in/fiona-qiu-a636131a4/"><img class="logo" src="images/linkedin.png"></a>
+      </div>
+      <p class="disclaimer">© Images by Pia Johnson Photography for the Australian National Academy of Music</p>
     </div>
-    <div class="contact-links " data-aos="fade-up" >
-      <img class="contact-img" src="images/IMG_1782.jpg">
-      <!-- <a href="https://www.instagram.com/sleeplessviolin/?hl=en"><img class="logo" src="images/instagram.png"></a>
-      <a href="mailto:sleeplessviolin@gmail.com"><img class="logo" src="images/mail.png"></a>
-      <a href="https://www.linkedin.com/in/fiona-qiu-a636131a4/"><img class="logo" src="images/linkedin.png"></a> -->
-    </div>
+    <!-- <img class="contact-img" src="images/IMG_1782.jpg" data-aos="fade-up" data-aos-duration="1300"> -->
+    <img class="contact-img" src="images/IMG_1781.jpg" data-aos="fade-up" data-aos-duration="1300">
   </div>
   <script>
     document.getElementById('contact-form').addEventListener('submit', async function(event) {
