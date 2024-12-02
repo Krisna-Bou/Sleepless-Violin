@@ -214,6 +214,11 @@ ul {
   justify-self: center;
 }
 
+.video-container-1 {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
 .video-preview {
   margin: 0 3%;
   height: 70% !important;
@@ -565,7 +570,7 @@ ul {
   }
   
   .image-1 {
-    width: 40%;
+    width: 50%;
   }
 
   .about-container-main {
@@ -573,6 +578,9 @@ ul {
     align-items: center;
     justify-content: space-between;
     padding: 1%;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .about-container-main p{
@@ -584,10 +592,6 @@ ul {
   .video-container {
     width: 80%;
     padding: 2% 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .video-container p{
@@ -662,6 +666,10 @@ ul {
 
 
 @media only screen and (min-width: 1201px) {
+  .image-1 {
+    width: 40%;
+  }
+
   .gallery-container {
     padding: 5% 15%;
     width: 70%;
