@@ -24,8 +24,22 @@ header {
   position: fixed;
   top: 0;
   z-index: 10;
-  transition: top 0.5s ease-in;
+  transition: top 0.5s;
 }
+
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
 
 .header-main {
   background-color: #1D1D1D;
@@ -113,10 +127,10 @@ header {
 .gradient-up{
   z-index: 1;
   position:absolute;
-  height: 350px;
+  height: 450px;
   width: 100%;
   background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, #1D1D1D 100% );
-  bottom: -185px;
+  bottom: -175px;
 }
 
 .cover {
@@ -153,6 +167,73 @@ header {
 .about-container-first img:hover {
   box-shadow: 0px 0px 80px 15px rgba(255, 255, 255, 0.1);
 }
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vh;
+  padding: 5% 0;
+}
+
+.horizontal-line {
+  margin: 0 45%;
+  width: 10%;
+  height: 2px;
+  background-color: white;
+}
+
+.quote {
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  width: 50%;
+  padding: 1% 25%;
+  height: fit-content;
+}
+
+.quote h1 {
+  font-style: italic;
+  margin-bottom: 2.5%;
+}
+
+.quote p {
+  font-style: italic; 
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .arrow-down {
 	display: block;
