@@ -14,7 +14,6 @@ h1 {
   font-weight: 100;
 }
 
-
 body {
   line-height: 1.8;
   font-size: 1.2em;
@@ -31,52 +30,50 @@ header {
    -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
-
-   /*
-     Introduced in IE 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
    -ms-user-select: none;
    user-select: none;
 }
 
+/* NAV HEADER BAR  */
 
 .header-main {
+  height: 90px;
   background-color: #1D1D1D;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-self: center;
   padding-top: 0.5%;
   padding-bottom: 1%;
   width: 100%;
 }
 
 .header-menu {
-  width: 33%;
+  width: 32.5%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
 }
 
 .header-menu ul, li{
-  font-size: 1.1em;
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   color: white;
   text-decoration: none;
   font-weight: 500;
+  
 }
 
 .header-menu a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out
 }
 
 .header-menu a:hover {
   color: rgb(167, 167, 167);
-  
 }
 
 .header-main-logo {
@@ -88,7 +85,7 @@ header {
 
 .header-main-logo a {
   display: flex;
-  width: 33.3%;
+  width: 35%;
   align-self: center;
 }
 
@@ -97,8 +94,8 @@ header {
 }
 
 .header-logos {
-  margin: 0 9%;
-  width: 15.3%;
+  margin: 0 5%;
+  width: 22.5%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -107,7 +104,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 8%;
 }
 
 .header-logos img{
@@ -116,28 +113,29 @@ header {
 
 .gradient-header{
   z-index: 1;
-  top: 500px;
-  height: 65px;
+  height: 10vh;
   width: 100%;
   background: linear-gradient(to bottom, #1D1D1D 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* ######################################################################## */
+/* MAIN COVER */
 
 .gradient-up{
   z-index: 1;
   position:absolute;
-  height: 450px;
+  height: 500px;
   width: 100%;
   background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, #1D1D1D 100% );
-  bottom: -175px;
+  bottom: -181px;
 }
 
 .cover {
-  margin-top: 80px;
+  margin-top: 90px;
   width: 100%;
   height: 110vh;
   background-image: url('/images/banner.jpg');
+  background-size: cover;
+  background-position-x: 30%;
 }
 
 .about-container-first {
@@ -183,6 +181,8 @@ header {
   background-color: white;
 }
 
+/* QUOTE */
+
 .quote {
   line-height: normal;
   display: flex;
@@ -205,6 +205,14 @@ header {
   margin-top: 0;
 }
 
+@media only screen and (min-width: 801) {
+
+}
+
+
+@media only screen and (min-width: 1201) {
+  
+}
 
 
 
@@ -231,49 +239,45 @@ header {
 
 
 
-
-
-
+#scroll-down {
+	display: block;
+	position: relative;
+	padding-top: 200px;
+}
 
 .arrow-down {
+  
 	display: block;
 	margin: 0 auto;
 	width: 10px;
 	height: 38px;
-  
 }
 
 .arrow-down:after {
-  z-index: 5;
-  position:absolute;
-  bottom: 50px;
 	content: "";
 	display: block;
 	margin: 0;
-  right: 50vw;
 	padding: 0;
 	width: 8px;
 	height: 8px;
 	border-top: 2px solid white;
 	border-right: 2px solid white;
 	transform: rotate(135deg);
-  
 }
 
 #scroll-down::before {
-  z-index: 5;
 	animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
 	position: absolute;
-	bottom: 50px;
-	right: 50.15vw;
+	bottom: 28px;
+	left: 50%;
 	margin-left: -1px;
-	width: 3px;
+	width: 2px;
 	height: 90px;
 	background: white;
 	content: " ";
 }
 
-@keyframes elasticus {
+@-webkit-keyframes elasticus {
 	0% {
 		transform-origin: 0% 0%;
 		transform: scale(1, 0);
@@ -293,8 +297,4 @@ header {
 		transform-origin: 0% 100%;
 		transform: scale(1, 0);
 	}
-}
-
-@media only screen and (min-width: 801) {
-
 }
