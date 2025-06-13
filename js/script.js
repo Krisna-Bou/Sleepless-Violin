@@ -6,9 +6,12 @@ window.onscroll = function () {
     if (previous > current) {
         document.getElementById("header").style.top = "0";
     } else {
-        if (current > 150) {
+        if (current > 200) {
             document.getElementById("header").style.top = "-200px";
         }
     }
     previous = current;
+    if (current < 200) {
+        document.getElementById("header").style.top = "0";
+    }
 }
