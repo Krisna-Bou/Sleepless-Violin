@@ -395,9 +395,9 @@ img:hover {
   }
 
   .sticky-box {
-    top: 100px;
-    width: 95%;
-    margin-left: 2.5%;
+    top: 70px;
+    width: 100%;
+    margin: 0;
   }
 
   .sticky-box img {
@@ -406,8 +406,8 @@ img:hover {
   }
 
   .sticky-box p {
-    width: 90%;
-    margin-left: 5%;
+    width: 95%;
+    margin-left: 2.5%;
   }
   
 }
