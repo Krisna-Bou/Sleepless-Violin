@@ -383,7 +383,8 @@ img:hover {
   }
 
   .sticky-box {
-    top: 20px
+    top: 20px;
+    width: 100%;
   }
 
   .sticky-box img {
@@ -394,6 +395,7 @@ img:hover {
   .sticky-box p {
     width: 95%;
     margin-left: 2.5%;
+    margin-right: 2.5%;
   }
   
 }
