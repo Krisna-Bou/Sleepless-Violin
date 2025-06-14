@@ -249,6 +249,8 @@ img:hover {
 }
 
 .sticky-box {
+  display: flex;
+  flex-direction: column;
   position: sticky;
   width: 90%;
   margin-left: 5%;
@@ -395,6 +397,7 @@ img:hover {
   }
 
   .sticky-box {
+    font-size: 0.9em;
     top: 70px;
     width: 100%;
     margin: 0;
@@ -406,8 +409,8 @@ img:hover {
   }
 
   .sticky-box p {
-    width: 95%;
-    margin-left: 2.5%;
+    width: 90%;
+    margin: 0;
   }
   
 }
@@ -476,19 +479,12 @@ img:hover {
   }
 
   .sticky-box {
-    top: 70px;
+    top: 10px;
   }
 
   .sticky-box img {
-    margin: 0 27.5%;
     width: 45%;
   }
-
-  .sticky-box p {
-    width: 70%;
-    margin-left: 15%;
-  }
-
 }
 
 
