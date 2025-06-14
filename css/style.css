@@ -285,6 +285,10 @@ img:hover {
 }
 
 @media only screen and (min-width: 801px) {
+  body {
+    font-size: 1.1em;
+  }
+
   .header-menu ul, li{
     font-size: 0.9em; 
   }
@@ -370,10 +374,49 @@ img:hover {
     margin: 0 35%;
     width: 30%;
   }
+
+  .gallery-container {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+  .gallery-container img {
+    margin: 0 15%;
+    width: 70%;
+    margin-bottom: 2.5%;
+  }
+
+  .gallery-about {
+    width: 50%;
+  }
+
+  .gallery-images {
+    width: 60%;
+  }
+
+  .sticky-box {
+    top: 100px;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .sticky-box img {
+    margin: 0;
+    width: 60%;
+  }
+
+  .sticky-box p {
+    width: 90%;
+    margin-left: 5%;
+  }
+  
 }
 
-
 @media only screen and (min-width: 1201px) {
+  body {
+    font-size: 1.2em;
+  }
+
   .header-menu ul, li{
     font-size: 1.1em; 
   }
@@ -411,6 +454,39 @@ img:hover {
   .horizontal-line {
     margin: 0 40%;
     width: 20%;
+  }
+
+  .gallery-container {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+  .gallery-container img {
+    margin: 0 20%;
+    width: 60%;
+    margin-bottom: 2.5%;
+  }
+
+  .gallery-about {
+    width: 55%;
+  }
+
+  .gallery-images {
+    width: 45%;
+  }
+
+  .sticky-box {
+    top: 70px;
+  }
+
+  .sticky-box img {
+    margin: 0 27.5%;
+    width: 45%;
+  }
+
+  .sticky-box p {
+    width: 70%;
+    margin-left: 15%;
   }
 
 }
