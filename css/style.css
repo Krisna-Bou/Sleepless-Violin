@@ -142,6 +142,14 @@ img:hover {
   bottom: -181px;
 }
 
+.gradient-down{
+  z-index: 1;
+  position:absolute;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(to bottom, #1D1D1D 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 .cover {
   margin-top: 90px;
   width: 100%;
@@ -282,6 +290,16 @@ img:hover {
   margin-left: 25%;
   width: 50%;
 }
+
+.contact {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-image: url('/images/1742405245646.jpg');
+  background-size: cover;
+  background-position: 30% center;
+  background-repeat: no-repeat;
+}
+
 
 @media only screen and (min-width: 801px) {
   body {
