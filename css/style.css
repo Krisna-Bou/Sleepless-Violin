@@ -298,8 +298,79 @@ img:hover {
   background-size: cover;
   background-position: 30% center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
+#contact {
+  background-color: #1D1D1D;
+  width: 35vw;
+  height: 80%;
+  border-radius: 30px;
+  text-align: start;
+  width: 35vw;
+  padding: 2.5%;
+  height: fit-content;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+  margin-left: 10%;  
+  margin-top: 15%;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+#contact-form input,
+#contact-form textarea  {
+  width: 92.5%;
+  background-color: #363636;
+  border-radius: .5rem;
+  height: 16px;
+  padding: 1rem 1.5rem;
+  font-size: 100%;
+  font-weight: 500;
+  color: white;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-style: none;
+}
+
+#contact-form textarea {
+  height: 15vh;
+  resize:vertical;
+}
+
+#contact-form button {
+  width: 40%;
+  font-size: 1rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: #6d6d6d;
+  color: white;
+  transition-duration: 0.4s;
+  font-weight: bold; 
+}
+
+.contact-logos {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-logos a {
+  width: 10%;
+}
+
+.contact-logos img {
+  width: 100%;
+}
 
 @media only screen and (min-width: 801px) {
   body {
