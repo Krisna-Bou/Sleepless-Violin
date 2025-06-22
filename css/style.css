@@ -304,20 +304,19 @@ img:hover {
 
 #contact {
   background-color: #1D1D1D;
-  width: 35vw;
-  height: 80%;
+  width: 30vw;
+  height: 100%;
   border-radius: 30px;
   text-align: start;
-  width: 35vw;
-  padding: 2.5%;
+  padding: 2%;
   height: fit-content;
   box-shadow: 0 0 100px rgba(0, 0, 0, 1);
-  margin-left: 10%;  
+  margin-left: 20%;  
   margin-top: 15%;
 }
 
-#contact-form {
-  width: 100%;
+#contact-form p{
+  margin: 1% 0;
 }
 
 #contact-form input,
