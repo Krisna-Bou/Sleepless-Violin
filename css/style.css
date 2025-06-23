@@ -310,18 +310,21 @@ img:hover {
   text-align: start;
   padding: 2%;
   height: fit-content;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
   margin-left: 20%;  
   margin-top: 15%;
+  transition: box-shadow .4s;
 }
 
+#contact:hover {
+  box-shadow: 0 0 100px #1D1D1D;
+}
 #contact-form p{
   margin: 1% 0;
 }
 
 #contact-form input,
 #contact-form textarea  {
-  width: 92.5%;
+  width: 92%;
   background-color: #363636;
   border-radius: .5rem;
   height: 16px;
@@ -336,7 +339,7 @@ img:hover {
 
 #contact-form textarea {
   height: 15vh;
-  resize:vertical;
+  resize:none;
 }
 
 #contact-form button {
@@ -352,6 +355,11 @@ img:hover {
   color: white;
   transition-duration: 0.4s;
   font-weight: bold; 
+}
+
+#contact-form button:hover {
+  cursor: pointer;
+  background-color: #363636;
 }
 
 .contact-logos {
