@@ -238,6 +238,7 @@ img:hover {
   margin-bottom: 10%;
   display: flex;
   height: fit-content;
+  justify-content: space-between;
 }
 
 .gallery-container img {
@@ -248,7 +249,7 @@ img:hover {
 
 .gallery-about {
   text-align: center;
-  width: 55%;
+  width: 60%;
 }
 
 .gallery-images {
@@ -269,8 +270,8 @@ img:hover {
 }
 
 .sticky-box p {
-  width: 80%;
-  margin-left: 10%;
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 .about-container-trio {
@@ -547,9 +548,9 @@ img:hover {
   }
 
   .sticky-box p {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   
   .article-img {
