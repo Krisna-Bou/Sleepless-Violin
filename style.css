@@ -183,12 +183,12 @@
   }
   .hero-scrim { position: absolute; inset: 0; background:
     linear-gradient(to bottom, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0) 22%),
-    linear-gradient(to top, var(--ink) 6%, rgba(29,29,29,0.40) 32%, rgba(29,29,29,0) 62%); }
+    linear-gradient(to top, var(--ink) 9%, rgba(20,20,20,0.66) 30%, rgba(20,20,20,0.30) 48%, rgba(29,29,29,0) 74%); }
   .hero-content { position: absolute; left: 0; right: 0; bottom: clamp(60px, 12vh, 150px);
     padding-inline: var(--gutter); max-width: var(--container); margin: 0 auto; }
   .hero-eyebrow { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4); }
   .hero-eyebrow .rule { width: 56px; box-shadow: 0 1px 8px rgba(0,0,0,0.55); }
-  .hero .eyebrow { color: rgba(255,255,255,0.94); text-shadow: 0 1px 12px rgba(0,0,0,0.7); }
+  .hero .eyebrow { color: #fff; font-weight: 500; text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 2px 18px rgba(0,0,0,0.6); }
   .hero h1 {
     font-family: var(--font-display); font-weight: 300; font-size: var(--text-display);
     line-height: 0.92; letter-spacing: 0.02em; text-transform: uppercase;
@@ -199,9 +199,10 @@
   .hero-sub p { max-width: 46ch; color: rgba(255,255,255,0.97); font-size: var(--text-lead); font-style: italic; text-shadow: 0 1px 14px rgba(0,0,0,0.7); }
 
   /* scroll cue (CSS only) */
-  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); width: 14px; height: 60px; animation: cuebob 1.8s var(--ease-soft) infinite; }
-  .scroll-cue::before { content: ""; position: absolute; left: 50%; top: 0; margin-left: -1px; width: 2px; height: 46px; background: var(--mute); }
-  .scroll-cue::after { content: ""; position: absolute; left: 50%; top: 40px; margin-left: -5px; width: 10px; height: 10px;
+  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; animation: cuebob 1.8s var(--ease-soft) infinite; }
+  .scroll-cue i { display: block; width: 2px; height: 40px; background: var(--mute); }
+  .scroll-cue b { display: block; width: 10px; height: 10px; margin-top: -6px;
     border-right: 2px solid var(--mute); border-bottom: 2px solid var(--mute); transform: rotate(45deg); }
   @keyframes cuebob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
@@ -257,7 +258,7 @@
   .gallery.rev .g-sticky { order: 2; }
   .g-sticky { position: sticky; top: calc(var(--header-h) + 28px); text-align: center; }
   .g-sticky .frame { overflow: hidden; width: 84%; margin: 0 auto var(--space-6); transition: box-shadow 0.5s var(--ease-soft); }
-  .g-sticky img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .g-sticky img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; max-height: min(52vh, 520px); }
   .g-sticky .frame:hover { box-shadow: 0 0 0 12px var(--ink), 0 0 0 13px var(--white-40); }
   .g-sticky .g-eyebrow { display: block; font-size: var(--text-caption); letter-spacing: var(--tracking-wide);
     text-transform: uppercase; color: var(--mute); margin-bottom: var(--space-3); }
@@ -291,15 +292,15 @@
   .press-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
   /* ============================== CONTACT ============================== */
-  .contact { position: relative; min-height: 1080px; display: flex; align-items: center; padding-block: clamp(72px, 7vw, 110px);
-    background: linear-gradient(rgba(18,18,18,0.42), rgba(18,18,18,0.62)), url('assets/contact-bg.jpg') 78% 72% / cover no-repeat; }
+  .contact { position: relative; min-height: 920px; display: flex; align-items: center; padding-block: clamp(72px, 7vw, 110px);
+    background: linear-gradient(rgba(18,18,18,0.38), rgba(18,18,18,0.58)), url('assets/contact-bg.jpg') 18% 52% / cover no-repeat; }
   .contact-card { background: rgba(20,20,20,0.80); backdrop-filter: blur(16px); border: 1px solid var(--white-08);
-    border-radius: var(--radius-card); padding: clamp(32px, 4vw, 56px); width: min(920px, 92%);
-    margin-left: clamp(20px, 8vw, 120px); display: grid; grid-template-columns: 0.78fr 1fr; gap: clamp(32px, 5vw, 60px);
+    border-radius: var(--radius-card); padding: clamp(32px, 4vw, 56px); width: min(660px, 90%);
+    margin-left: clamp(16px, 4vw, 64px); display: grid; grid-template-columns: 0.82fr 1fr; gap: clamp(28px, 4vw, 52px);
     box-shadow: 0 24px 70px rgba(0,0,0,0.45);
     transition: transform var(--dur-med) var(--ease-soft), box-shadow var(--dur-med) var(--ease-soft), border-color var(--dur-med); }
   .contact-card:hover { transform: translateY(-4px); box-shadow: 0 44px 110px rgba(0,0,0,0.6); border-color: var(--white-20); }
-  .contact-intro h2 { font-family: var(--font-display); font-weight: 300; font-size: var(--text-h2); margin: var(--space-3) 0 var(--space-4); }
+  .contact-intro h2 { font-family: var(--font-display); font-weight: 300; font-size: var(--text-h2); margin: 0 0 var(--space-4); }
   .contact-intro .lead { color: rgba(255,255,255,0.80); margin-bottom: var(--space-7); max-width: 30ch; }
   .contact-meta { list-style: none; padding: 0; margin: 0 0 var(--space-7); }
   .contact-meta li { padding: var(--space-3) 0; border-top: 1px solid var(--white-08); font-size: var(--text-small); color: rgba(255,255,255,0.84); }
@@ -334,11 +335,18 @@
   /* ============================== RESPONSIVE ============================== */
   /* Large screens: let the layout breathe into the wider canvas instead of
      stranding a fixed 1280px column with vast empty margins. */
-  @media (min-width: 1500px) { :root { --container: 1400px; --text-body: 1.1875rem; --text-small: 1.05rem; --text-caption: 0.95rem; --text-micro: 0.82rem; } }
+  @media (min-width: 1500px) { :root { --container: 1400px; --text-body: 1.1875rem; --text-small: 1.05rem; --text-caption: 0.95rem; --text-micro: 0.82rem; }
+    .contact { min-height: 1080px; }
+    .contact-card { margin-left: clamp(64px, 11vw, 200px); width: min(740px, 90%); }
+    .press { grid-template-columns: 1fr 300px; }
+  }
   @media (min-width: 1700px) { :root { --container: 1520px; --text-body: 1.25rem; --text-small: 1.1rem; --text-caption: 1rem; --text-micro: 0.85rem; } }
   @media (min-width: 2000px) {
     :root { --container: 1680px; --gutter: clamp(80px, 7vw, 150px); --text-display: clamp(6rem, 8vw, 9.5rem); --text-body: 1.3rem; --text-small: 1.15rem; }
     .hero-sub p, .bio p, .g-sticky p { max-width: 56ch; }
+    .contact { min-height: 1180px; }
+    .contact-card { margin-left: clamp(120px, 13vw, 320px); width: min(820px, 90%); }
+    .press { grid-template-columns: 1fr 360px; }
   }
   @media (min-width: 2400px) { :root { --container: 2040px; --text-body: 1.35rem; } }
 
@@ -371,6 +379,12 @@
     .hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
     .sec-head { margin-bottom: var(--space-8); }
     .mobile-menu .m-link { font-size: 2rem; }
+  }
+  @media (max-height: 820px) and (min-width: 901px) {
+    .g-sticky { top: calc(var(--header-h) + 16px); }
+    .g-sticky .frame { width: 70%; }
+    .g-sticky img { max-height: 44vh; }
+    .g-sticky p { font-size: var(--text-small); }
   }
   @media (prefers-reduced-motion: reduce) {
     .reveal, .reveal .rule { opacity: 1 !important; transform: none !important; }
