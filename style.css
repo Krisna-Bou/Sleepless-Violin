@@ -146,7 +146,7 @@
   .nav-menu a:hover { color: var(--mute); }
   .nav-menu a:hover::after { transform: scaleX(1); }
   .nav-logo { justify-self: center; }
-  .nav-logo img { width: 116px; transition: opacity var(--dur-fast); }
+  .nav-logo img { width: 138px; transition: opacity var(--dur-fast); }
   .nav-logo img:hover { opacity: 0.75; }
   .nav-right { justify-self: end; display: flex; align-items: center; gap: var(--space-6); }
   .socials { display: flex; align-items: center; gap: var(--space-5); }
@@ -264,7 +264,9 @@
   .g-sticky p { color: rgba(255,255,255,0.82); max-width: 48ch; margin: 0 auto; }
   .g-stack { display: flex; flex-direction: column; gap: var(--block-gap); }
   .g-stack figure { overflow: hidden; transition: box-shadow 0.5s var(--ease-soft); }
-  .g-stack img { display: block; width: 100%; height: auto; }
+  .g-stack figure.reveal { transform: translateY(70px); transition: opacity 1.5s var(--ease-soft), transform 1.5s var(--ease-soft), box-shadow 0.5s var(--ease-soft); }
+  .g-stack figure.reveal.in { transform: none; }
+  .g-stack img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .g-stack figure:hover { box-shadow: 0 0 0 12px var(--ink), 0 0 0 13px var(--white-40); }
 
   /* ============================== TRIO ============================== */
@@ -289,7 +291,7 @@
   .press-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
   /* ============================== CONTACT ============================== */
-  .contact { position: relative; min-height: 920px; display: flex; align-items: center; padding-block: clamp(56px, 6vw, 88px);
+  .contact { position: relative; min-height: 1080px; display: flex; align-items: center; padding-block: clamp(72px, 7vw, 110px);
     background: linear-gradient(rgba(18,18,18,0.42), rgba(18,18,18,0.62)), url('assets/contact-bg.jpg') 78% 72% / cover no-repeat; }
   .contact-card { background: rgba(20,20,20,0.80); backdrop-filter: blur(16px); border: 1px solid var(--white-08);
     border-radius: var(--radius-card); padding: clamp(32px, 4vw, 56px); width: min(920px, 92%);
@@ -345,6 +347,7 @@
     .nav-toggle { display: block; }
     .nav-inner { display: flex; justify-content: space-between; align-items: center; }
     .nav-logo { justify-self: auto; }
+    .nav-logo img { width: 110px; }
     .hero-photo { background-position: 26% 28%; }
     .bio, .gallery, .press, .perf-row, .contact-card, .field-row { grid-template-columns: 1fr; }
     .gallery.rev .g-sticky { order: 0; }
