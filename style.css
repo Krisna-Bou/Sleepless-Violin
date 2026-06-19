@@ -199,9 +199,10 @@
   .hero-sub p { max-width: 46ch; color: rgba(255,255,255,0.97); font-size: var(--text-lead); font-style: italic; text-shadow: 0 1px 14px rgba(0,0,0,0.7); }
 
   /* scroll cue (CSS only) */
-  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); width: 14px; height: 60px; animation: cuebob 1.8s var(--ease-soft) infinite; }
-  .scroll-cue::before { content: ""; position: absolute; left: 50%; top: 0; margin-left: -1px; width: 2px; height: 46px; background: var(--mute); }
-  .scroll-cue::after { content: ""; position: absolute; left: 50%; top: 40px; margin-left: -5px; width: 10px; height: 10px;
+  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; animation: cuebob 1.8s var(--ease-soft) infinite; }
+  .scroll-cue i { display: block; width: 2px; height: 40px; background: var(--mute); }
+  .scroll-cue b { display: block; width: 10px; height: 10px; margin-top: -6px;
     border-right: 2px solid var(--mute); border-bottom: 2px solid var(--mute); transform: rotate(45deg); }
   @keyframes cuebob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
@@ -336,14 +337,16 @@
      stranding a fixed 1280px column with vast empty margins. */
   @media (min-width: 1500px) { :root { --container: 1400px; --text-body: 1.1875rem; --text-small: 1.05rem; --text-caption: 0.95rem; --text-micro: 0.82rem; }
     .contact { min-height: 1080px; }
-    .contact-card { margin-left: clamp(64px, 11vw, 200px); }
+    .contact-card { margin-left: clamp(64px, 11vw, 200px); width: min(740px, 90%); }
+    .press { grid-template-columns: 1fr 300px; }
   }
   @media (min-width: 1700px) { :root { --container: 1520px; --text-body: 1.25rem; --text-small: 1.1rem; --text-caption: 1rem; --text-micro: 0.85rem; } }
   @media (min-width: 2000px) {
     :root { --container: 1680px; --gutter: clamp(80px, 7vw, 150px); --text-display: clamp(6rem, 8vw, 9.5rem); --text-body: 1.3rem; --text-small: 1.15rem; }
     .hero-sub p, .bio p, .g-sticky p { max-width: 56ch; }
     .contact { min-height: 1180px; }
-    .contact-card { margin-left: clamp(120px, 13vw, 320px); }
+    .contact-card { margin-left: clamp(120px, 13vw, 320px); width: min(820px, 90%); }
+    .press { grid-template-columns: 1fr 360px; }
   }
   @media (min-width: 2400px) { :root { --container: 2040px; --text-body: 1.35rem; } }
 
