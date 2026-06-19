@@ -299,7 +299,7 @@
     box-shadow: 0 24px 70px rgba(0,0,0,0.45);
     transition: transform var(--dur-med) var(--ease-soft), box-shadow var(--dur-med) var(--ease-soft), border-color var(--dur-med); }
   .contact-card:hover { transform: translateY(-4px); box-shadow: 0 44px 110px rgba(0,0,0,0.6); border-color: var(--white-20); }
-  .contact-intro h2 { font-family: var(--font-display); font-weight: 300; font-size: var(--text-h2); margin: var(--space-3) 0 var(--space-4); }
+  .contact-intro h2 { font-family: var(--font-display); font-weight: 300; font-size: var(--text-h2); margin: 0 0 var(--space-4); }
   .contact-intro .lead { color: rgba(255,255,255,0.80); margin-bottom: var(--space-7); max-width: 30ch; }
   .contact-meta { list-style: none; padding: 0; margin: 0 0 var(--space-7); }
   .contact-meta li { padding: var(--space-3) 0; border-top: 1px solid var(--white-08); font-size: var(--text-small); color: rgba(255,255,255,0.84); }
@@ -334,11 +334,16 @@
   /* ============================== RESPONSIVE ============================== */
   /* Large screens: let the layout breathe into the wider canvas instead of
      stranding a fixed 1280px column with vast empty margins. */
-  @media (min-width: 1500px) { :root { --container: 1400px; --text-body: 1.1875rem; --text-small: 1.05rem; --text-caption: 0.95rem; --text-micro: 0.82rem; } }
+  @media (min-width: 1500px) { :root { --container: 1400px; --text-body: 1.1875rem; --text-small: 1.05rem; --text-caption: 0.95rem; --text-micro: 0.82rem; }
+    .contact { min-height: 1080px; }
+    .contact-card { margin-left: clamp(64px, 11vw, 200px); }
+  }
   @media (min-width: 1700px) { :root { --container: 1520px; --text-body: 1.25rem; --text-small: 1.1rem; --text-caption: 1rem; --text-micro: 0.85rem; } }
   @media (min-width: 2000px) {
     :root { --container: 1680px; --gutter: clamp(80px, 7vw, 150px); --text-display: clamp(6rem, 8vw, 9.5rem); --text-body: 1.3rem; --text-small: 1.15rem; }
     .hero-sub p, .bio p, .g-sticky p { max-width: 56ch; }
+    .contact { min-height: 1180px; }
+    .contact-card { margin-left: clamp(120px, 13vw, 320px); }
   }
   @media (min-width: 2400px) { :root { --container: 2040px; --text-body: 1.35rem; } }
 
