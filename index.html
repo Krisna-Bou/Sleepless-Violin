@@ -277,8 +277,8 @@
   .g-sticky p { color: rgba(255,255,255,0.82); max-width: 48ch; margin: 0 auto; }
   .g-stack { display: flex; flex-direction: column; gap: var(--block-gap); }
   .g-stack figure { overflow: hidden; transition: box-shadow 0.5s var(--ease-soft); }
-  .g-stack figure.reveal { transform: translateY(70px); filter: blur(12px) saturate(0.85); transition: opacity 1.4s var(--ease-soft), transform 1.4s var(--ease-soft), filter 1.4s var(--ease-soft), box-shadow 0.5s var(--ease-soft); }
-  .g-stack figure.reveal.in { transform: none; filter: blur(0) saturate(1); }
+  .g-stack figure.reveal { transform: translateY(70px); filter: saturate(0.85); transition: opacity 1.4s var(--ease-soft), transform 1.4s var(--ease-soft), filter 1.4s var(--ease-soft), box-shadow 0.5s var(--ease-soft); }
+  .g-stack figure.reveal.in { transform: none; filter: saturate(1); }
   /* image is taller than its frame so it can drift within the overflow:hidden figure */
   .g-stack img { display: block; width: 100%; height: calc(100% + 64px); margin-top: -32px; object-fit: cover; will-change: transform; }
   .g-stack figure:hover { box-shadow: 0 0 0 12px var(--ink), 0 0 0 13px var(--white-40); }
@@ -456,9 +456,6 @@
   <div class="hero-photo" id="hero-photo"></div>
   <div class="hero-scrim"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="eyebrow">Violinist · Mozarteum University</span>
-    </div>
     <h1>Fiona<span class="ital">Qiu</span></h1>
     <div class="hero-sub">
       <p>'A master of music and her own destiny.'</p>
