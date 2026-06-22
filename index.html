@@ -214,8 +214,8 @@
   .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; animation: cuebob 1.8s var(--ease-soft) infinite; }
   .scroll-cue i { display: block; width: 2px; height: 40px; background: var(--mute); }
-  .scroll-cue b { display: block; width: 10px; height: 10px; margin-top: -6px;
-    border-right: 2px solid var(--mute); border-bottom: 2px solid var(--mute); transform: rotate(45deg); }
+  .scroll-cue b { display: block; box-sizing: border-box; width: 12px; height: 12px; margin-top: -7px;
+    border-right: 2px solid var(--mute); border-bottom: 2px solid var(--mute); transform: rotate(45deg); transform-origin: center; }
   @keyframes cuebob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
   /* ============================== SECTION HEADINGS ============================== */
@@ -348,6 +348,9 @@
   footer .foot-nav a { font-size: var(--text-caption); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--mute); transition: color var(--dur-fast); }
   footer .foot-nav a:hover { color: var(--paper); }
   footer .copy { color: var(--ink-soft); font-size: var(--text-caption); }
+  footer .credit { color: var(--ink-soft); font-size: var(--text-caption); margin-top: var(--space-2); opacity: 0.8; }
+  footer .credit a { color: var(--mute); transition: color var(--dur-fast); }
+  footer .credit a:hover { color: var(--paper); }
 
   /* ============================== RESPONSIVE ============================== */
   /* Large screens: let the layout breathe into the wider canvas instead of
@@ -642,6 +645,7 @@
     <a href="#media">Media</a>
   </nav>
   <p class="copy">© 2026 Fiona Qiu · Sleepless Violin</p>
+  <p class="credit">Website created by <a href="https://havendesigns.com.au" target="_blank" rel="noopener">Krisna Bou @ Haven Designs</a></p>
 </footer>
 
 <script>
